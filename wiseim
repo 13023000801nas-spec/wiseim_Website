@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睿创咨询 WiseIM | 驱动中国企业的创新增长</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0f172a', // 深海蓝
+                            gold: '#c5a059', // 哑光金
+                            light: '#f8fafc',
+                            slate: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif SC"', 'serif'],
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .service-card:hover .service-icon {
+            color: #c5a059;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-navy flex items-center justify-center text-brand-gold font-serif text-xl font-bold rounded-sm">
+                        睿
+                    </div>
+                    <div>
+                        <span class="block font-serif text-xl font-bold text-brand-navy tracking-wide">睿创咨询</span>
+                        <span class="block text-[10px] uppercase tracking-widest text-slate-500">Wise Innovation Management</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-12 items-center">
+                    <a href="#about" class="text-sm font-medium text-slate-600 hover:text-brand-navy transition-colors">关于睿创</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-brand-navy transition-colors">核心业务</a>
+                    <a href="#cases" class="text-sm font-medium text-slate-600 hover:text-brand-navy transition-colors">行业案例</a>
+                    <a href="#insights" class="text-sm font-medium text-slate-600 hover:text-brand-navy transition-colors">洞察观点</a>
+                    <a href="#diagnosis" class="text-sm font-medium text-brand-gold hover:text-brand-navy transition-colors">痛点速诊 ✨</a>
+                    <a href="#contact" class="px-6 py-2.5 bg-brand-navy text-white text-sm font-medium rounded-sm hover:bg-slate-800 transition-colors shadow-lg shadow-brand-navy/20">联系我们</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-slate-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50">关于睿创</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50">核心业务</a>
+                <a href="#cases" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-slate-50">行业案例</a>
+                <a href="#diagnosis" class="block px-3 py-3 text-base font-medium text-brand-gold hover:bg-slate-50">痛点速诊 ✨</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-brand-gold font-bold">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+            <div class="max-w-3xl animate-fade-in-up">
+                <div class="inline-block px-3 py-1 mb-6 border border-brand-gold/30 rounded-full bg-brand-navy/50 backdrop-blur-sm">
+                    <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">专注高端管理咨询二十年</span>
+                </div>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+                    构建世界级<br>
+                    <span class="text-brand-gold">研发创新体系</span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed font-light max-w-2xl">
+                    我们协助行业领导者通过 IPD 变革与数字化转型，突破增长瓶颈，构建不可复制的组织核心竞争力。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#diagnosis" class="px-8 py-4 bg-brand-gold text-brand-navy text-base font-bold rounded-sm hover:bg-yellow-600 transition-colors text-center">
+                        立即诊断企业痛点 ✨
+                    </a>
+                    <a href="#services" class="px-8 py-4 bg-transparent border border-white text-white text-base font-medium rounded-sm hover:bg-white/10 transition-colors text-center">
+                        探索解决方案
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Trust/Stats Section -->
+    <section class="bg-brand-navy py-16 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-700/50">
+                <div class="p-4">
+                    <div class="text-4xl font-serif text-brand-gold font-bold mb-2">15+</div>
+                    <div class="text-slate-400 text-sm tracking-wider">年专注研发管理变革</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-serif text-brand-gold font-bold mb-2">500+</div>
+                    <div class="text-slate-400 text-sm tracking-wider">行业领军企业案例</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-serif text-brand-gold font-bold mb-2">100%</div>
+                    <div class="text-slate-400 text-sm tracking-wider">核心专家实战背景</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-serif text-brand-gold font-bold mb-2">TOP</div>
+                    <div class="text-slate-400 text-sm tracking-wider">IPD 落地实施领导者</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition / About -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4">关于睿创 · About WiseIM</h2>
+                    <h3 class="font-serif text-4xl text-brand-navy font-bold mb-6 leading-snug">
+                        不仅仅是咨询，<br>更是企业的深度战略伙伴。
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        上海睿创企业管理咨询有限公司（WiseIM）成立于2010年，是中国领先的创新与研发管理咨询机构。我们不同于传统的培训机构，我们深入企业“骨髓”，解决最复杂的管理难题。
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        从**川润股份**的跨界战略转型，到**新能源行业**的爆发式增长辅导，睿创始终坚持“精品战略，价值导向”。我们协助企业建立从市场洞察到产品上市的端到端流程（IPD），确保战略不仅仅停留在PPT上，而是转化为实实在在的市场份额与利润。
+                    </p>
+                    
+                    <div class="flex items-center gap-4 mt-8">
+                        <div class="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center text-brand-navy">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="text-sm text-slate-500 italic border-l-2 border-brand-gold pl-4">
+                            "真正的大客户突破，是组织整体能力的突破。睿创不仅提供方法，更构建能力。"
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-gold/10 z-0"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-navy/10 z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="Consulting Team" class="relative z-10 w-full rounded-sm shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4">核心业务 · Core Services</h2>
+                <h3 class="font-serif text-3xl md:text-4xl text-brand-navy font-bold mb-6">全方位的管理变革解决方案</h3>
+                <p class="text-slate-500">我们提供从战略规划到落地执行的闭环服务，确保每一次变革都能产生可衡量的商业价值。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-brand-gold group cursor-pointer">
+                    <div class="service-icon text-4xl text-slate-300 mb-6 transition-all duration-300">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">IPD 体系变革</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        基于标杆企业的最佳实践，为企业量身定制集成产品开发（IPD）体系。包括需求管理、产品规划、技术开发及生命周期管理，解决“产品开发周期长、成功率低”的核心痛点。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 战略与规划流程 (SP/BP)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 跨部门重量级团队 (IPMT/PDT)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 结构化开发流程</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-brand-gold group cursor-pointer">
+                    <div class="service-icon text-4xl text-slate-300 mb-6 transition-all duration-300">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">业务陪跑与爆品打造</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        不只是提供方案，更由于资深顾问深入一线，与客户团队共同作战。通过试点项目（Pilot Project）实战辅导，打赢一场胜仗，从而带动整个组织能力的提升。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 样板点项目辅导</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 市场洞察与机会点挖掘</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 爆品全流程策划</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-10 rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-transparent hover:border-brand-gold group cursor-pointer">
+                    <div class="service-icon text-4xl text-slate-300 mb-6 transition-all duration-300">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">关键人才训战营</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        结合任正非“训战结合”的理念，为企业培养懂经营、善管理的产品经理与研发骨干。解决“有战略无人才”的困境，打造一支能打硬仗的铁军。
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 产品经理特训营</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 研发项目管理实战</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-gold text-xs"></i> 大客户营销铁三角赋能</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Case Studies -->
+    <section id="cases" class="py-24 bg-brand-navy text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-800/30 skew-x-12 transform translate-x-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4">行业案例 · Success Stories</h2>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold">见证变革的力量</h3>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="text-brand-gold hover:text-white transition-colors flex items-center gap-2 pb-2 border-b border-brand-gold/30 hover:border-white">
+                        查看更多案例 <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Case 1 -->
+                <div class="group relative overflow-hidden rounded-sm bg-slate-800 hover:-translate-y-2 transition-transform duration-500">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="Energy Industry" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-wider mb-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                            能源装备行业
+                        </div>
+                        <h4 class="font-serif text-2xl font-bold mb-4">川润股份：从传统制造到智慧应急的跨越</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            2020年起，睿创辅导川润构建MM（市场管理）与IPD流程。通过三年的深度陪跑，助力其成功研发“综合防灾应急仓”，实现从传统能源装备向智慧应急领域的战略转型。
+                        </p>
+                        <a href="#" class="inline-block text-white border-b border-white/30 pb-1 hover:border-brand-gold transition-colors text-sm">阅读完整案例分析</a>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="group relative overflow-hidden rounded-sm bg-slate-800 hover:-translate-y-2 transition-transform duration-500">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="High Tech" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-wider mb-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                            电子信息行业
+                        </div>
+                        <h4 class="font-serif text-2xl font-bold mb-4">某上市科技巨头：IPD驱动百亿级增长</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            针对大客户经营困局，通过“铁三角”组织变革与客户关系管理体系的重构，将单一客户产出提升300%，打破了西方竞争对手在核心网业务的长期垄断。
+                        </p>
+                        <a href="#" class="inline-block text-white border-b border-white/30 pb-1 hover:border-brand-gold transition-colors text-sm">阅读完整案例分析</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights / Content Marketing (Simulated) -->
+    <section id="insights" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4">睿创观点 · Insights</h2>
+                    <h3 class="font-serif text-3xl md:text-4xl text-brand-navy font-bold">思想领导力</h3>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="#" class="group block">
+                    <div class="bg-white p-8 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-brand-gold">
+                        <span class="text-xs text-slate-400 mb-2 block">2025-06-16</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">为什么一定是大客户？谁是你的大客户？</h4>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            寻找价值客户是一个双向的价值匹配过程！企业必须正确地选择大客户，将其作为高质量增长背后的核心引擎...
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="group block">
+                    <div class="bg-white p-8 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-brand-gold">
+                        <span class="text-xs text-slate-400 mb-2 block">2025-06-10</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">《人民日报》任正非点破：组织打仗，靠的是梯队！</h4>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            真正的竞争，从来不是你今天有没有个牛人，而是你的组织有没有培养出一支打胜仗的作战梯队...
+                        </p>
+                    </div>
+                </a>
+                <a href="#" class="group block">
+                    <div class="bg-white p-8 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-brand-gold">
+                        <span class="text-xs text-slate-400 mb-2 block">2025-05-28</span>
+                        <h4 class="font-serif text-lg font-bold text-brand-navy mb-4 group-hover:text-brand-gold transition-colors">IPD体系驱动产品创新，助力川润股份拓展智慧应急领域</h4>
+                        <p class="text-slate-500 text-sm line-clamp-3">
+                            川润正式发布综合防灾应急仓产品，标志着其通过IPD体系成功实现从能源装备到智慧应急领域的战略转型...
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- R&D Pain Point Diagnosis Tool (LLM Feature) -->
+    <section id="diagnosis" class="py-24 bg-brand-navy/95 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-brand-gold font-bold tracking-widest text-sm uppercase mb-4">即时变革痛点速诊 · Quick Diagnosis ✨</h2>
+                <h3 class="font-serif text-3xl md:text-4xl font-bold">500万咨询费的首次洞察，免费获取</h3>
+                <p class="text-slate-300 mt-4">
+                    只需描述您企业在研发、创新或市场管理中遇到的最大挑战（请勿输入机密信息），<br class="hidden sm:inline">我们的 AI 战略引擎将立即提供一份高层次的诊断分析。
+                </p>
+            </div>
+            
+            <div class="bg-slate-800 p-8 rounded-lg shadow-2xl">
+                <textarea id="painPointInput" rows="5" class="w-full p-4 bg-slate-700 text-white rounded-sm border border-slate-600 focus:outline-none focus:border-brand-gold resize-none" placeholder="例如：我们的新产品开发周期长达18个月，市场成功率不到30%，而且研发与销售部门的冲突非常严重。"></textarea>
+                
+                <button id="diagnosisButton" onclick="handleDiagnosis()" class="mt-4 w-full md:w-auto px-8 py-3 bg-brand-gold text-brand-navy font-bold rounded-sm hover:bg-yellow-600 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i class="fas fa-microchip mr-2"></i>
+                    <span id="buttonText">生成诊断报告 ✨</span>
+                </button>
+                
+                <div id="loadingIndicator" class="mt-6 hidden text-brand-gold flex items-center justify-center">
+                    <i class="fas fa-spinner fa-spin mr-3"></i>
+                    <span class="text-sm">AI 顾问正在深度分析，请稍候...</span>
+                </div>
+
+                <div id="diagnosisResult" class="mt-8 pt-6 border-t border-slate-700 hidden">
+                    <h4 class="font-serif text-2xl font-bold text-brand-gold mb-4">诊断报告摘要：</h4>
+                    <div id="resultContent" class="bg-slate-700 p-6 rounded-sm text-slate-200 leading-relaxed whitespace-pre-wrap">
+                        <!-- Diagnosis content will be inserted here -->
+                    </div>
+                </div>
+                
+                <div id="errorBox" class="mt-8 p-4 bg-red-800/50 border border-red-700 rounded-sm text-red-300 hidden">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    <span id="errorMessage">诊断失败，请检查您的输入或稍后再试。</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-24 bg-brand-navy relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">准备好开启变革之旅了吗？</h2>
+            <p class="text-xl text-slate-300 mb-12 font-light">
+                真正的咨询不只是提供报告，而是交付结果。<br>
+                立即联系睿创专家，探讨您的企业增长战略。
+            </p>
+            
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-lg border border-white/20 inline-block w-full max-w-lg">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="text-left">
+                        <p class="text-slate-400 text-xs uppercase tracking-widest mb-1">项目咨询与合作</p>
+                        <p class="text-2xl text-white font-bold font-serif">182-2755-3762</p>
+                        <p class="text-slate-400 text-sm mt-1">刘老师 (微信同号)</p>
+                    </div>
+                    <div class="h-12 w-px bg-white/20 hidden md:block"></div>
+                    <div>
+                        <a href="tel:18227553762" class="block w-full px-8 py-4 bg-brand-gold text-brand-navy font-bold rounded-sm hover:bg-yellow-600 transition-colors shadow-lg">
+                            <i class="fas fa-phone-alt mr-2"></i> 立即咨询
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-gold flex items-center justify-center text-brand-navy font-serif font-bold rounded-sm text-sm">睿</div>
+                        <span class="font-serif text-lg font-bold text-white">睿创咨询</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        上海睿创企业管理咨询有限公司<br>
+                        助推有理想有追求的企业更成功。
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">解决方案</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">IPD 体系建设</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">研发管理变革</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">数字化转型</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">爆品打造陪跑</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">行业聚焦</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">新能源与储能</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">高端装备制造</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">电子信息</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors">生物医疗</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">联系方式</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-map-marker-alt w-5"></i> 上海市静安区越洋广场38层</li>
+                        <li><i class="fas fa-phone w-5"></i> 182-2755-3762</li>
+                        <li><i class="fas fa-envelope w-5"></i> contact@wiseim.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>Copyright © 2025 上海睿创企业管理咨询有限公司. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">沪ICP备16003689号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = ""; // API key is provided at runtime in the canvas environment
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        // Utility function for exponential backoff retry
+        async function fetchWithRetry(url, options, maxRetries = 3) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.status === 429 && i < maxRetries - 1) {
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        async function handleDiagnosis() {
+            const inputElement = document.getElementById('painPointInput');
+            const resultDiv = document.getElementById('diagnosisResult');
+            const resultContent = document.getElementById('resultContent');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const button = document.getElementById('diagnosisButton');
+            const errorBox = document.getElementById('errorBox');
+            const inputChallenge = inputElement.value.trim();
+
+            resultDiv.classList.add('hidden');
+            errorBox.classList.add('hidden');
+            resultContent.textContent = '';
+
+            if (inputChallenge.length < 30) {
+                errorBox.classList.remove('hidden');
+                document.getElementById('errorMessage').textContent = '请输入至少30字的企业挑战描述，以便AI进行深度分析。';
+                return;
+            }
+
+            button.disabled = true;
+            document.getElementById('buttonText').textContent = '分析中...';
+            loadingIndicator.classList.remove('hidden');
+            
+            // System instruction to set the persona and format the output
+            const systemPrompt = `你是一位专注于IPD（集成产品开发）、组织变革和研发管理的高级咨询专家，目标客户是年咨询费在500万以上的行业领导者。请以专业的、高屋建瓴的语气，对用户提供的企业挑战进行高层次诊断。
+
+请严格按照以下格式输出：
+### 核心痛点分析
+[用精炼的语言，提炼出1到3个核心痛点]
+
+### 战略模块建议
+[基于痛点，精准指出最应该优先启动的IPD或战略模块（例如：市场管理MM, 投资组合管理PPM, 结构化开发流程PDP, 跨部门团队IPMT等）]
+
+### 3点行动方向
+[提供3条高层次、具备战略指导意义的行动建议]
+
+请确保语言专业、简洁，且充满洞察力。`;
+
+            const userQuery = `请针对我们企业面临的挑战进行诊断，挑战描述如下：\n\n"${inputChallenge}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                // No tools (grounding) needed, as this is internal management analysis based on established models (IPD).
+            };
+
+            try {
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || '未能获得有效的诊断结果，请尝试调整您的输入。';
+
+                resultContent.textContent = text;
+                resultDiv.classList.remove('hidden');
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                errorBox.classList.remove('hidden');
+                document.getElementById('errorMessage').textContent = '诊断请求失败：网络或API连接异常。请稍后再试。';
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                button.disabled = false;
+                document.getElementById('buttonText').textContent = '重新诊断 ✨';
+            }
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-4', 'py-2');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-2', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>
